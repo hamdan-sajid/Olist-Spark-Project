@@ -1,52 +1,66 @@
-#Big Data Pipeline using Google Cloud Dataproc
-📌 Overview
+# 🚀 BIG DATA PIPELINE USING GOOGLE CLOUD DATAPROC
 
-This project implements an end-to-end big data processing pipeline using Google Cloud Platform with Dataproc (Hadoop + Spark). The pipeline covers data ingestion, cleaning, transformation, integration, optimization, and data serving in a distributed cloud environment.
+---
 
-🏗 ##Architecture
+## 📌 OVERVIEW
 
-GCS → Dataproc (Hadoop + Spark) → Processing → Optimized Output → External Storage / Visualization
+This project implements an end-to-end big data processing pipeline using **Google Cloud Platform (GCP)** with **Dataproc (Hadoop + Spark)**.  
+The pipeline covers data ingestion, cleaning, transformation, integration, optimization, and data serving in a distributed cloud environment.
 
-1️⃣ ##Data Ingestion & Exploration
+---
 
-Created a Dataproc cluster (Spark + Hadoop).
+## 🏗 ARCHITECTURE
 
-Uploaded CSV files to Google Cloud Storage (GCS).
+**GCS → Dataproc (Hadoop + Spark) → Processing → Optimized Output → External Storage / Visualization**
 
-Loaded data into Spark DataFrames from GCS/HDFS.
+---
 
-Extracted and validated schema using printSchema() and describe().
+## 1️⃣ DATA INGESTION & EXPLORATION
 
-Performed initial exploratory analysis and LDA (if applicable).
+- Created a Dataproc cluster (Spark + Hadoop)  
+- Uploaded CSV files to **Google Cloud Storage (GCS)**  
+- Loaded data into Spark DataFrames from GCS/HDFS  
+- Extracted and validated schema using `printSchema()` and `describe()`  
+- Performed exploratory analysis and LDA (if applicable)
 
-2️⃣ ##Data Cleaning & Transformation
+---
 
-Handled missing/null values.
+## 2️⃣ DATA CLEANING & TRANSFORMATION
 
-Standardized date formats.
+- Handled missing/null values  
+- Standardized date formats  
+- Applied normalization and scaling for numerical features  
+- Performed feature engineering to create derived columns  
 
-Applied normalization and scaling for numerical features.
+---
 
-Performed feature engineering to create new derived columns.
+## 3️⃣ DATA INTEGRATION & AGGREGATION
 
-3️⃣ ##Data Integration & Aggregation
+- Joined multiple datasets using Spark SQL  
+- Aggregated metrics (count, sum, average, etc.)  
+- Removed duplicates and resolved schema inconsistencies  
 
-Joined multiple datasets using Spark SQL.
+---
 
-Aggregated metrics (count, sum, average, etc.).
+## 4️⃣ PERFORMANCE OPTIMIZATION
 
-Removed duplicates and resolved schema inconsistencies.
+- Applied data partitioning for better parallelism  
+- Used caching for iterative operations  
+- Tuned Spark configurations for efficient job execution  
 
-4️⃣ ##Performance Optimization
+---
 
-Applied data partitioning for better parallelism.
+## 5️⃣ DATA SERVING
 
-Used caching for iterative operations.
+- Exported processed data to GCS / external databases  
+- Created visualizations to analyze trends and patterns  
 
-Tuned Spark configurations for efficient job execution.
+---
 
-5️⃣ ##Data Serving
+## ⚙️ TECH STACK
 
-Exported processed data to GCS / external databases.
-
-Created visualizations to analyze trends and patterns.
+- Google Cloud Dataproc  
+- Apache Spark  
+- Hadoop (HDFS)  
+- Spark MLlib  
+- PySpark  
